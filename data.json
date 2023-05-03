@@ -1,0 +1,21 @@
+[ 
+    {
+        "id":1,
+        "Nombre":"Hazael Alejandro Perez Beltran",
+        "Correo":"hola@outlook.com",
+        "Contraseña":"vfoa8980"
+    },
+    {
+        "id":2,
+        "Nombre":"Isa Davis",
+        "Correo":"nodemon@outlook.com",
+        "Contraseña":"fjjvdosd9"
+    },
+    {
+        "id":3,
+        "Nombre":"Angel Valenzuela",
+        "Correo":"aaaa@outlook.com",
+        "Contraseña":"kf9e02"
+    }
+
+]
