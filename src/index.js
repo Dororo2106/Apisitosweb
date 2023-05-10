@@ -6,7 +6,7 @@ const sql = require('mssql')
 //configuraciones
 app.set("port",8001)
 app.set("json spaces",2);
-
+/*
   var Connection = require('tedious').Connection;  
   var config = {  
       server: 'LAPTOP-G7BI5T01',  //update me
@@ -31,6 +31,7 @@ app.set("json spaces",2);
       /*executeStatement1();  */
 
 
+      /*
   });
 
   connection.connect();
@@ -75,7 +76,7 @@ app.set("json spaces",2);
       });
       connection.execSql(Request);  
   } 
-
+*/
   /*function executeStatement1() {  
     var request = new Request("INSERT AGENTE VALUES('TUPU', '4');", function(err) {  
      if (err) {  
