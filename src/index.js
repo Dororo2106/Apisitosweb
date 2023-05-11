@@ -103,13 +103,13 @@ app.set("json spaces",2);
     connection.execSql(request);
 }  */
 
-//middlewares
+//middlewarenpms
 
 app.use(morgan('dev'));
 app.use(express.json());
 
 //rutas
-app.listen(8000);
+//app.listen(8000);
 console.log("aaaaa");
 app.use(require("../rutas/Rutas"))
 

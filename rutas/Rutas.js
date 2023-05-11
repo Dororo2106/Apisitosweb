@@ -5,30 +5,29 @@ const Movil =require("../data.json");
 console.log(Movil);
 
 router.get("/datos", (req,res) => {
-     const {id,Nombre,Correo,Contraseña}= req.params;
-   //   Movil.forEach(Movil =>
-    //    {
-   // if(Movil.id == id)
-     //       {
+    // const {id,Nombre,Correo,Contraseña}= req.params;
                 res.json(Movil);
-     //       }
-//});
-    res.send("ok");
-        console.log(id);
+               // console.log(Movil);
+   // res.send("ok");
 });
 
-router.get('/IP/{Nombre}', (req,res) => {
-   const {Nombre}= req.params;
-   Movil.forEach(Movil =>{
-       if(Movil.Nombre == Nombre){
-         res.json(Movil);
+router.post('/datosnuevo', (req,res) => {
+   const {id,Nombre, Correo, Contraseña}= req.body;
+       if( Nombre && Correo && Contraseña)
+       {
+            const id = Movil.length+1;
+            const nuevosdatos = (req.body, id);
+            Movil.push(nuevosdatos);
+            res.json(Movil);
         }
-    });
+        else
+        {
+            res.send("error");
+        }
 
-   console.log(Nombre);
 }); 
 
-router.get('/IP/Correo', (req,res) => {
+router.get('/datos/{Correo}', (req,res) => {
     const {Correo}= req.params;
     Movil.forEach(Movil =>{
         if(Movil.Zona == Zona){
@@ -77,6 +76,6 @@ router.post('/registro', (req, res) =>
         }
         res.send("ok");
     }   
-); //Registra una nueva queja en el servidor
+);
 
 module.exports=router;
